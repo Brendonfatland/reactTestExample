@@ -12,15 +12,11 @@ describe('Image component', function() {
         var renderer = TestUtils.createRenderer();
         renderer.render(<Image url={url} description={description} />);
         var result = renderer.getRenderOutput();
-        result.props.className.should.equal('gallery-image');
+        result.props.className.should.equal('gallery');
 
-        var img = result.props.children[0];
-        img.type.should.equal('img');
-        img.props.src.should.equal(url);
-        img.props.alt.should.equal(description);
+        var images = result.props.children[0];
+        images.type.should.equal('images');
+        
 
-        var p = result.props.children[1];
-        p.type.should.equal('p');
-        p.props.children.should.equal(description);
     });
 });

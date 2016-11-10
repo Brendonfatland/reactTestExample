@@ -2,10 +2,10 @@ var React = require('react');
 var TestUtils = require('react-addons-test-utils');
 var should = require('chai').should();
 
-var Image = require('../js/components/image');
+var Image = require('../js/components/gallery');
 
-describe('Image component', function() {
-    it('Renders the image and description',  function() {
+describe('Display multiple images component', function() {
+    it('Renders multiple of the image and description',  function() {
         var url = "http://www.example.com/image.png";
         var description = "Example description";
 
